@@ -4,4 +4,4 @@ resources:
   - ../../base/
 namespace: prod
 patchesStrategicMerge:
-  - configmap.yam
+  - configmap.yaml

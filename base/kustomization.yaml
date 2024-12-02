@@ -1,5 +1,3 @@
-namePrefix: kustomize-
-
 resources:
   - configmap.yaml
   - api-service.yaml

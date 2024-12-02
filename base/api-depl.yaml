@@ -25,11 +25,11 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: api-cm
-                  value: START
+                  key: START
             - name: STOP
               valueFrom:
                 configMapKeyRef:
                   name: api-cm
-                  value: START
+                  key: START
           ports:
             - containerPort: 80

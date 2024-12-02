@@ -19,8 +19,9 @@ spec:
           env:
             - name: POKEDEX_NAME
               valueFrom:
-                fieldRef:
-                  fieldPath: spec.nodeName
+                configMapKeyRef:
+                  name: api-cm
+                  key: NAME
             - name: POKEDEX_START_NUMBER
               valueFrom:
                 configMapKeyRef:

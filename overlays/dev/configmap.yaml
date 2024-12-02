@@ -3,5 +3,6 @@ kind: ConfigMap
 metadata:
   name: api-cm
 data:
+  NAME: "dev"
   START: "1"
   STOP: "600"

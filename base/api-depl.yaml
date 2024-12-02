@@ -31,6 +31,6 @@ spec:
               valueFrom:
                 configMapKeyRef:
                   name: api-cm
-                  key: END
+                  key: STOP
           ports:
             - containerPort: 3000

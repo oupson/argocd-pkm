@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pokeapi
+spec:
+  replicas: 2
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: pokeapi
+  template:
+    metadata:
+      labels:
+        app: pokeapi
+    spec:
+      containers:
+        - image: pokeapi:0.1
+          name: pokeapi
+          env:
+            - name: NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: START
+              valueFrom:
+                configMapRefKey:
+                  name: api-cm
+                  value: START
+            - name: STOP
+              valueFrom:
+                configMapRefKey:
+                  name: api-cm
+                  value: START
+          ports:
+            - containerPort: 80

@@ -23,12 +23,12 @@ spec:
                   fieldPath: spec.nodeName
             - name: START
               valueFrom:
-                configMapRefKey:
+                configMapKeyRef:
                   name: api-cm
                   value: START
             - name: STOP
               valueFrom:
-                configMapRefKey:
+                configMapKeyRef:
                   name: api-cm
                   value: START
           ports:

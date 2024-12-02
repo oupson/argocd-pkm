@@ -32,4 +32,4 @@ spec:
                   name: api-cm
                   key: START
           ports:
-            - containerPort: 80
+            - containerPort: 3000

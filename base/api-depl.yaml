@@ -17,16 +17,16 @@ spec:
         - image: pokeapi:0.1
           name: pokeapi
           env:
-            - name: NAME
+            - name: POKEDEX_NAME
               valueFrom:
                 fieldRef:
                   fieldPath: spec.nodeName
-            - name: START
+            - name: POKEDEX_START_NUMBER
               valueFrom:
                 configMapKeyRef:
                   name: api-cm
                   key: START
-            - name: STOP
+            - name: POKEDEX_END_NUMBER
               valueFrom:
                 configMapKeyRef:
                   name: api-cm
